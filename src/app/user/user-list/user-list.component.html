@@ -1,0 +1,63 @@
+<div class="user-list-main mb-5 h-120">
+  <ng-container>
+    <div
+      *ngIf="error"
+      class="alert alert-danger alert-dismissible fade show my-2 text-center"
+      role="alert"
+    >
+      <strong>{{ errorMessage }}</strong>
+      <button type="button" class="close" (click)="closeErrorAlert()" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </ng-container>
+  <div class="row pt-4 align-items-center">
+    <div class="col-1 offset-1">
+      <img src="assets/svg/ico-user-with-gray-circle.svg" class="item-icon" />
+    </div>
+    <div class="col-9 pl-4 ml-2 heading">{{ "USERS" }}</div>
+  </div>
+  <div class="row mx-2">
+    <hr class="col-10 offset-1 divider mr-2" />
+  </div>
+  <div class="row my-2">
+    <app-search-field class="col-8 offset-1" (searchcriteria)="search($event)"></app-search-field>
+    <div class="col-2 text-right" (click)="fetchData()">
+      <img class="menu-icon" src="assets/svg/ico-menu-circle.svg" />
+    </div>
+  </div>
+  <div class="content pb-4">
+
+    <div class="mt-4">
+      <ng-container class="row mx-2" *ngFor="let user of usersList">
+        <div class="col-11 offset-1 pl-2" *ngIf="checkIfNew(user?.name?.first)">
+          <div class="heading mb-1 mt-2">
+            {{ user?.name?.first?.charAt(0)?.toUpperCase() }}
+          </div>
+        </div>
+        <div class="row py-2 mx-2 item" routerLinkActive="active">
+          <div class="col-1 offset-1">
+            <img
+              src="{{
+                user?.picture?.thumbnail || 'assets/svg/ico-user-with-gray-circle.svg'
+              }}"
+              class="item-icon"
+            />
+          </div>
+          <div class="col-8 pl-4">
+            <div class="col-12 heading2">
+              {{ user?.name?.first + " " + user?.name?.last }}
+            </div>
+            <div class="col-12 status">{{ user?.login?.username }}</div>
+          </div>
+          <div
+            class="col-1 px-1 text-right arrow-icon"
+            [routerLink]="['/users/', user?.login?.md5 ]"
+          >
+            <img src="assets/svg/ico-chevron-forward-outline.svg" />
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

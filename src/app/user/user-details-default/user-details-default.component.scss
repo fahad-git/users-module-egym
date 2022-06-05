@@ -1,0 +1,28 @@
+.user-access-details-default-main {
+  width: 100%;
+  min-height: 90vh;
+  justify-content: center;
+  border: 25px solid white;
+  border-radius: 20px;
+  box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.heading {
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.icon-container {
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  box-shadow: 1px 1px 5px 0px #a0a0a0;
+}
+.user-icon {
+  margin-top: 23px;
+  height: 35px;
+}

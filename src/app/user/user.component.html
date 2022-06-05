@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="user-management">
+    <div
+      class="row h-100 my-lg-5 mx-lg-5 my-xl-5 mx-xl-5 my-xl-5 mx-xl-5 my-md-3 mx-md-3 my-sm-2 mx-sm-2 my-xs-1 mx-xs-1"
+    >
+      <app-user-list
+        class="col-12 col-lg-4 col-mt-5 pr-lg-3 pr-xl-3 mb-md-5"
+      ></app-user-list>
+      <!-- adding router outlet for child routes -->
+      <div class="col-12 col-lg-8 col-mt-5 pl-lg-3 pl-xl-3 mb-md-5">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

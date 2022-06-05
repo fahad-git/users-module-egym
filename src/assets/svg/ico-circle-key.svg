@@ -1,0 +1,11 @@
+<svg id="Group_8625" data-name="Group 8625" xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49">
+  <g id="Ellipse_331" data-name="Ellipse 331" fill="none" stroke="#000" stroke-width="2">
+    <circle cx="24.5" cy="24.5" r="24.5" stroke="none"/>
+    <circle cx="24.5" cy="24.5" r="23.5" fill="none"/>
+  </g>
+  <g id="ico-share-user-access" transform="translate(13 13)">
+    <path id="Path_14754" data-name="Path 14754" d="M20.9,4.559a7.6,7.6,0,0,1,0,15.2,9.46,9.46,0,0,1-3-.471v1.433a1,1,0,0,1-1,1H15.622V23a1,1,0,0,1-1,1H13.342v1.281a1,1,0,0,1-1,1H11.061V27.56a1,1,0,0,1-1,1H5.5a1,1,0,0,1-1-1V23a1,1,0,0,1,.307-.721l8.7-8.357A7.6,7.6,0,0,1,20.9,4.559Zm0,13.2a5.593,5.593,0,1,0-5.319-3.844,1,1,0,0,1-.257,1.034L6.5,23.425V26.56H9.061V25.279a1,1,0,0,1,1-1h1.281V23a1,1,0,0,1,1-1h1.281V20.718a1,1,0,0,1,1-1H15.9V17.677a1,1,0,0,1,1.576-.818A6.119,6.119,0,0,0,20.9,17.757Z" transform="translate(-4.5 -4.559)"/>
+    <path id="Path_14755" data-name="Path 14755" d="M25.855,11.961a1.105,1.105,0,1,1,1.105-1.105A1.1,1.1,0,0,1,25.855,11.961Z" transform="translate(-8.69 -4.07)"/>
+    <path id="Path_14755_-_Outline" data-name="Path 14755 - Outline" d="M25.855,12.961a2.105,2.105,0,1,1,2.105-2.105A2.091,2.091,0,0,1,25.855,12.961Z" transform="translate(-8.69 -4.07)"/>
+  </g>
+</svg>

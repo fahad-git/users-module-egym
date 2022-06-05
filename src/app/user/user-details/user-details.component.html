@@ -1,0 +1,86 @@
+<div class="user-detail-main pr-3 mb-5">
+  <div class="row pt-4">
+    <div class="col-2 ml-5 text-right">
+      <img class="avatar" 
+        src="{{  user?.picture?.large || 'assets/svg/ico-user-with-gray-circle.svg' }}" 
+        />
+    </div>
+    <div class="col-lg-12 col-xl-9 ml-3">
+      <div class="row">
+        <div class="col-12 main-heading">
+          {{  user?.name?.title + " " + user?.name?.first + " " + user?.name?.last }}
+        </div>
+        <div class="col-12 setting-icon">
+          <div class="row mt-3">
+            <span class="col-6 col-md-4 d-flex">
+                <img
+                src="assets/svg/ico-user-with-gray-circle.svg"
+                class="icon"
+                />
+                <span class="ml-2 mt-1 text d-flex flex-column">
+                  {{ user?.login?.username || 'username' }}
+                  <b class="sub-title">
+                    Username
+                  </b>
+                </span>
+            </span>
+            <span class="col-6 col-md-4 d-flex">
+              <img
+              src="assets/svg/ico-user-with-gray-circle.svg"
+              class="icon"
+              />
+              <span class="ml-2 mt-1 text d-flex flex-column">
+                 {{ user?.gender || "dumy@xyz.com" }}
+                <b class="sub-title">
+                  Gender
+                </b>
+              </span>
+          </span>
+          <span class="col-sm-12 col-md-4 d-flex ">
+            <img
+            src="assets/svg/ico-default-home-circle.svg"
+            class="icon"
+            />
+            <span class="ml-2 mt-1 text d-flex flex-column">
+               {{ user?.phone || "+719283949"}}
+              <b class="sub-title">
+                Phone
+              </b>
+            </span>
+        </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider mr-2 ml-5" />
+  <div class="row mt-xl-5 mt-lg-3">
+    <div class="col-12 text-center mb-xl-3 mb-lg-1">
+      <b>User Details</b>
+    </div>
+    <div class="col-11 offset-2">
+      <b>Email: </b> {{ user?.email }}
+    </div>
+    <div class="col-11 offset-2 mt-2">
+      <b>Address: </b>
+      <div class="col-12 offset-1">
+        <b>Steet Name: </b>{{ user?.location?.street?.name }}
+      </div> 
+      <div class="col-12 offset-1">
+        <b>Steet Number: </b>{{ user?.location?.street?.number }}
+      </div> 
+      <div class="col-12 offset-1">
+        <b>City: </b>{{ user?.location?.city }}
+      </div> 
+      <div class="col-12 offset-1">
+        <b>State: </b>{{ user?.location?.state }}
+      </div> 
+      <div class="col-12 offset-1">
+        <b>Country: </b>{{ user?.location?.country }}
+      </div> 
+    </div>
+    <div class="col-11 offset-2 mt-2">
+      <b>Cell: </b> {{ user?.cell }}
+    </div>
+  </div>
+</div>

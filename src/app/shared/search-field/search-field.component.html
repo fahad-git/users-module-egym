@@ -1,0 +1,21 @@
+<form
+  class="form-inline md-form form-sm form-control form-control-sm px-2 py-2 search-field"
+>
+  <img class="icon" src="assets/svg/ico-search.svg" (click)="searchThis()" />
+  <input
+    class="field ml-3 col"
+    type="text"
+    placeholder="Search for keywords"
+    aria-label="Search"
+    [(ngModel)]="searchWord"
+    name="search"
+    (input)="searchThis()"
+    mdbInput
+  />
+  <img
+  *ngIf="searchWord"
+  src="/assets/svg/ico-cross.svg"
+  class="icon"
+  (click)="clearAll()"
+/>
+</form>

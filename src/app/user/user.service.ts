@@ -29,7 +29,6 @@ export class UserService {
       .pipe(
         map((res: any) => {
           try {
-            throw new Error("Failed to load users list")
             if (res && res?.results && res?.results?.length > 0) {
               let usersList: IUser[] = res.results;
               this.usersData = usersList;

@@ -1,17 +1,31 @@
 import { BehaviorSubject, Observable } from 'rxjs';
-import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ChangeDetectorRef, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UserListComponent } from './user-list.component';
+import { UserService } from '../user.service';
 
-xdescribe('#UserListComponent unit test cases suit', () => {
+describe('#UserListComponent unit test cases suit', () => {
   let component: UserListComponent;
   let fixture: ComponentFixture<UserListComponent>
+
+  let userServiceStub = {
+    getUsersList: (data: number) => {
+      return new Observable((observer) => observer.error());
+    }
+  } as UserService;
+
+  let cdStub = {
+    detectChanges: () => {}
+  } as ChangeDetectorRef
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [UserListComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
-      providers: [],
+      providers: [
+        { provide: UserService, useValue: userServiceStub },
+        { provide: ChangeDetectorRef, useValue: cdStub }
+      ],
     }).compileComponents();
   });
 

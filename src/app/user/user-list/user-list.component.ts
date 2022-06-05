@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
 import { IUser } from "../user-interfaces";
 import { UserService } from "../user.service";
 
@@ -14,6 +15,7 @@ export class UserListComponent implements OnInit, OnDestroy {
   userFilteredList: IUser[] | undefined;
   error: boolean | undefined;
   errorMessage: string | undefined;
+  userSub: Subscription | undefined
    
   constructor(
     private userService: UserService,
@@ -21,7 +23,7 @@ export class UserListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.userService.getUsersList(10).subscribe({
+    this.userSub = this.userService.getUsersList(10).subscribe({
       next: (usersList: IUser[] | undefined) => {
         this.usersList = usersList;
         this.userFilteredList = usersList;
@@ -71,5 +73,6 @@ export class UserListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.userSub?.unsubscribe();
   }
 }

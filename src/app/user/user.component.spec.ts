@@ -1,10 +1,8 @@
-import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';=
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { UserComponent } from './user.component';
 
-xdescribe('#UsersComponent unit test cases suit', () => {
+describe('#UsersComponent unit test cases suit', () => {
   let component: UserComponent;
   let fixture: ComponentFixture<UserComponent>;
   let routerSpy = { navigate: jasmine.createSpy('navigate') };

@@ -8,6 +8,12 @@ This project is an Angular-based application that fetches user data from the [Ra
 - **Data Display:** Presents the fetched user information in a structured and readable format.
 - **Modular Architecture:** Designed as a module to facilitate easy integration and scalability within Angular applications.
 
+---
+
+![10](https://github.com/user-attachments/assets/b9cd6269-df37-4a1d-aad7-cc6d7de38f06)
+
+---
+
 ## Prerequisites
 
 Before setting up the project, ensure you have the following installed:
@@ -67,6 +73,12 @@ ng build --prod
 ```
 
 The build artifacts will be stored in the `dist/` directory.
+
+---
+
+![3](https://github.com/user-attachments/assets/6083dbc2-97a7-492e-b2cb-e1d79a19fe9c)
+
+---
 
 ## Running Unit Tests
 
